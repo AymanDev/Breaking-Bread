@@ -18,8 +18,10 @@ public class Score : MonoBehaviour
 
     private void Tick()
     {
-        // ReSharper disable once PossibleLossOfFraction
-        if (timer != null) score += 1.5 * (timer.seconds / 5);
+        if (timer != null)
+        {
+            score += 1.5 * (timer.seconds / 5);
+        }
         text.text = "Score: " + Convert.ToInt32(score);
     }
 }

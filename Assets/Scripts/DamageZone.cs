@@ -22,7 +22,10 @@ public class DamageZone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (!collider.tag.Equals("Player")) return;
+        if (!collider.tag.Equals("Player"))
+        {
+            return;
+        }
         var playerController = collider.GetComponent<PlayerController>();
 
         if (infecting)

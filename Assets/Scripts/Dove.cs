@@ -2,13 +2,10 @@
 
 public class Dove : MonoBehaviour
 {
-    Rigidbody2D rigidBody;
-
+    private Rigidbody2D rigidBody;
     [SerializeField] private float timeForRandomMovement = 2f;
     public int phase;
-
     [SerializeField] private float speedPush = 20f;
-
     private bool right = true;
 
     void Start()
@@ -19,10 +16,13 @@ public class Dove : MonoBehaviour
 
     private void RandomMovement()
     {
-        if (phase != 0) return;
+        if (phase != 0)
+        {
+            return;
+        }
+
         var side = Random.Range(0, 100);
         var force = new Vector2(-speedPush, 200f);
-
         if (side < 50)
         {
             force = new Vector2(speedPush, 200f);
@@ -45,6 +45,5 @@ public class Dove : MonoBehaviour
     {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
-        //transform.localScale = theScale;
     }
 }

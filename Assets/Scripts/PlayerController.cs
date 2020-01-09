@@ -43,10 +43,7 @@ public class PlayerController : MonoBehaviour
             {
                 vertical = joystick.vertical;
             }
-        } /*else {
-			horizontal = Input.GetAxis ("Horizontal");
-			vertical = Input.GetAxis ("Vertical");
-		}*/
+        }
 
         if (GameObject.Find("Events").GetComponent<Events>().weatherType == Events.EnumWeatherType.FOGGY)
         {
@@ -60,12 +57,12 @@ public class PlayerController : MonoBehaviour
         {
             Move();
             animator.SetBool("walking", true);
-            transform.FindChild("Particle System").gameObject.SetActive(true);
+            transform.Find("Particle System").gameObject.SetActive(true);
         }
         else if (animator.GetBool("walking"))
         {
             animator.SetBool("walking", false);
-            transform.FindChild("Particle System").gameObject.SetActive(false);
+            transform.Find("Particle System").gameObject.SetActive(false);
         }
     }
 

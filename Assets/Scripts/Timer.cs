@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         text = GetComponent<Text>();
-        new DateTime();
         InvokeRepeating("Tick", 1f, 1f);
     }
 

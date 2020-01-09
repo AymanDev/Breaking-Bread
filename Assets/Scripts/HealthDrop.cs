@@ -33,7 +33,6 @@ public class HealthDrop : MonoBehaviour
             }
             playerController.Damage(0, false);
         }
-
         Destroy(gameObject);
     }
 }

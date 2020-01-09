@@ -19,12 +19,12 @@ public class SkinController : MonoBehaviour
 
     private void DisableSkin(int skinId)
     {
-        transform.FindChild(skinId.ToString()).gameObject.SetActive(false);
+        transform.Find(skinId.ToString()).gameObject.SetActive(false);
     }
 
     private void EnableSkin(int skinId)
     {
-        transform.FindChild(skinId.ToString()).gameObject.SetActive(true);
+        transform.Find(skinId.ToString()).gameObject.SetActive(true);
     }
 
     public void Increase()
